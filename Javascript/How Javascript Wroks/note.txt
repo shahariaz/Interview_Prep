@@ -1,0 +1,20 @@
+Everything In  Javascript Happens  inside an Execution Context
+
+Javascript is a single-threaded synchronus high level interpretd languge. 
+
+JavaScript main execution context by managing it trough call stack.
+
+
+Whenever A JS code run..
+ 1>> In frist stage it assign value into the variable and func... It know as Merory Creation phase. In this phase it replace variable with undefined and it store function all code same as it.
+ 2>> 2nd phase known as Execution phase.. In this phase all varibale reflace with actual value. Whenever A function invoke in this execution phase It will create own mini context that is know as functional context which also maintain via CallStack
+
+
+CallStack Also Know As:
+1>> CallStack
+2>> Execution context stack
+3>>Program stack
+4>>Runtime stack
+5>>Machine stack
+
+***CallStack maintains the order of exection of execution context***
