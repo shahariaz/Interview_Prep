@@ -1,0 +1,4 @@
+***Hoisting is a phenomena in javaScript by which we can access all variable and functions before we have initialized it or we can put value on those***
+
+When we try to access variable before intializtion we will get undefined bcz it store undefined when memrory location phase happen. 
+If we try to access normal function before inatialization we can, but we can't access arrow function and declerative function, they will behave like variable and we can't invoke a variable.
