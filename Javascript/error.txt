@@ -1,0 +1,35 @@
+JavaScript Error Types Explained
+JavaScript has several built-in error types that help identify issues in your code. Here are explanations of three common error types:
+
+TypeError
+A TypeError occurs when an operation is performed on a value of the wrong type.
+
+Common causes:
+
+Trying to call something that's not a function
+Accessing properties on null or undefined
+Using array methods on non-array objects
+Example:
+
+SyntaxError
+A SyntaxError occurs when the JavaScript parser encounters code that violates the language syntax rules.
+
+Common causes:
+
+Missing closing brackets, braces or parentheses
+Invalid variable names
+Missing semicolons (in some contexts)
+Using reserved keywords incorrectly
+Example:
+
+ReferenceError
+A ReferenceError occurs when you try to use a variable or function that hasn't been declared or is out of scope.
+
+Common causes:
+
+Using a variable before declaring it
+Accessing variables outside their scope
+Typos in variable names
+Example:
+
+Understanding these error types can help you diagnose and fix problems in your JavaScript code more efficiently.

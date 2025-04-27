@@ -1,0 +1,9 @@
+*** Scope is where you can access a specific function or varibale ***
+*** Whenever Execution Context Created It also create Lexical Env***
+
+*** Lexical Scope is the scope of a function with his perent too*** 
+Child can acess perents but parents can't acceses child scope if it in child Scope.
+
+*** Lexical Env mean local env with parents env *** 
+
+Scope Chain ->> IF a function B called inside function A.. B will have lexical env of A and it's own..A have lexical env of Global and Global has lexcial Env of Null...So B can access A's lexical Scope and Gloabl lexical Scope.   

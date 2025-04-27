@@ -1,0 +1,54 @@
+*** "Let" not in Global Scope or Object so we can't acceses it before intialized. It also undefined value in memeory creation phase ***
+
+
+Temporal Dead Zone in JavaScript
+The Temporal Dead Zone (TDZ) is a behavior in JavaScript where variables declared with let and const cannot be accessed before they are initialized.
+
+What is the Temporal Dead Zone?
+The TDZ is the period between:
+
+The creation of a variable's binding in the scope (at the start of the scope)
+The actual declaration/initialization of that variable
+During this period, trying to access the variable will throw a ReferenceError.
+
+Example:
+`
+console.log(myVar); // undefined - no TDZ for var declarations
+var myVar = 5;
+
+console.log(myLet); // ReferenceError: Cannot access 'myLet' before initialization
+let myLet = 10;
+
+console.log(myConst); // ReferenceError: Cannot access 'myConst' before initialization
+const myConst = 15;
+`
+
+Why does TDZ exist?
+
+
+
+
+
+
+
+
+
+
+
+
+********_____________________________________*************
+
+Block is also known as compound statment.
+A Block Used to multiple JS statement into one group.When JS expect one statement we can use block to group multiple Js into One Group... like if(true) return true;
+Here Js expect only one statement but we can use multiple by {
+  console.log('True')
+  a = 8;
+}
+
+
+***Block scope is the scope where if we declear let and cosnt we can't access it globally, we can only access it in block but for Var We can Access It bcz it in global Scope**** If same named var in block and global scope when we will try to access in block we will access block one... It will shadow global one.. It's known as Shadowing.It will replace the global one bcz they Both are reference to the same memory location.
+
+There are 3 type Of scope where is 
+1) Global Scope
+2) Script Scope
+3) Block Scope

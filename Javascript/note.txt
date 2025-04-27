@@ -1,0 +1,5 @@
+*** Whenever JS run if the file empty it still create Window object alongside Global Execution Context.***
+***In Global Level "this" keyword refers to the "Global" object***
+
+*** Everything that not inside Function is in Global Space***
+
