@@ -52,3 +52,5 @@ There are 3 type Of scope where is
 1) Global Scope
 2) Script Scope
 3) Block Scope
+
+***Illegal Shadowing in Js, We can't shadow a let with var...suppose we declear  let a =5; and in block we can't declear var a = 8; it illegal but we can do it by let...But we can shadow a var with let..bcz var in gloabl scope and let in block scope.

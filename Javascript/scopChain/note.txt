@@ -7,3 +7,52 @@ Child can acess perents but parents can't acceses child scope if it in child Sco
 *** Lexical Env mean local env with parents env *** 
 
 Scope Chain ->> IF a function B called inside function A.. B will have lexical env of A and it's own..A have lexical env of Global and Global has lexcial Env of Null...So B can access A's lexical Scope and Gloabl lexical Scope.   
+
+
+# Understanding Lexical Scope in JavaScript
+
+Based on your notes and question, I'll explain lexical scope in more detail.
+
+## Lexical Scope
+
+Lexical scope (also known as static scope) refers to how variable access is determined by the physical location of variables in the source code. It defines where and how variables can be resolved when they're referenced.
+
+The term "lexical" comes from the fact that this scoping is determined during the lexical analysis phase of compilation.
+
+## Key Concepts
+
+1. **Nesting Structure**: Inner functions can access variables defined in their outer (enclosing) functions.
+
+2. **Lexical Environment**: As your notes mention, a lexical environment consists of:
+   - A local environment (variables defined in the current scope)
+   - References to parent environments
+
+3. **Scope Chain**: When a variable is referenced, JavaScript looks for it:
+   - First in the current scope
+   - Then in the outer enclosing scope
+   - And continues up until it reaches the global scope
+   - If not found anywhere, it returns `undefined` or throws a `ReferenceError`
+
+## Example
+
+```javascript
+const globalVar = "I'm global";
+
+function outerFunction() {
+  const outerVar = "I'm from outer";
+  
+  function innerFunction() {
+    const innerVar = "I'm from inner";
+    console.log(innerVar);    // Accessible: own scope
+    console.log(outerVar);    // Accessible: parent scope
+    console.log(globalVar);   // Accessible: global scope
+  }
+  
+  innerFunction();
+  // console.log(innerVar); // Error: Not accessible
+}
+
+outerFunction();
+```
+
+In this example, `innerFunction` has access to variables in its own scope, its parent's scope (`outerFunction`), and the global scope - forming the lexical scope chain exactly as your notes describe.

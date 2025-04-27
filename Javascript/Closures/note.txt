@@ -1,0 +1,40 @@
+*** Function along with it's lexical scope forms a cloures***
+
+
+Closures in JavaScript
+
+Definition:
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function.
+
+Example:
+function outer() {
+  let counter = 0;
+  function inner() {
+    counter++;
+    console.log(counter);
+  }
+  return inner;
+}
+
+const incrementCounter = outer();
+incrementCounter(); // 1
+incrementCounter(); // 2
+
+Key points:
+1. Closures are created every time a function is created, at function creation time.
+2. A closure gives you access to variables from an outer function's scope chain.
+3. Functions in JavaScript form closures.
+4. Closures enable data privacy through the module pattern.
+5. The inner function maintains a reference to its outer scope, keeping it alive.
+
+Use cases:
+- Data encapsulation
+- Function factories
+- Implementing modules
+- Event handlers
+- Callbacks
+- Currying
+- Function Like Once
+- Memoize
+- SetTimeouts
+- Iterators
